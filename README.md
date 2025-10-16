@@ -23,7 +23,9 @@ OPÇÃO 3 (RECOMENDADO)
 Baixe a extensão WebNative, depois de instalar, abra o projeto na pasta raiz
 Quando ele terminar de carregar ele vai disponibilizar para exibição nas versões
 -> WEB (testado)
+  descomentar linhas 34-46 e 78-88 e comentar 48-52 e 90-94 src/pages/CadastroSolicitacao.tsx(camera e localização) 
 -> Android (testado)
+  descomentar linhas 48-52 e 90-94 e comentar 34-46 e 78-88 - src/pages/CadastroSolicitacao.tsx(camera e localização)
 -> IOS (não testado)
 
 ----VIDEO DO APP---
