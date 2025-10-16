@@ -40,7 +40,20 @@ Java Development Kit (JDK)
 Necessário para compilar o projeto Android. Pode ser:
 
 Java 17 E Java 21
-Download JDK
+adicionar ultima linha se não houver em android/gradle.properties
+org.gradle.java.home=C:/Program Files/Java/jdk-21
+adicionar a linha 43 se não houver em android/gradlew.bat
+set JAVA_HOME=C:\Program Files\Java\jdk-17
+
+donload sdk
+adicionar ao diretorio android/local.properties
+(alterar conforme nescessidade)
+sdk.dir=C\:\\Users\\ruhan\\AppData\\Local\\Android\\Sdk
+
+android gradle plugin version 8.7.2
+gradle 8.11.1
+ndk 29.0.14033849
+build-tools 35.0.0
 
 Android Studio (para compilar e testar no Android)
 Download Android Studio
