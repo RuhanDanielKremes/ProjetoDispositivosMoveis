@@ -4,15 +4,6 @@ import { addDoc, collection, CollectionReference, deleteDoc, doc, getDoc, getDoc
 import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCw95PQgz-4S6irVCG9LHmRSnAI0_Y4Me0",
-  authDomain: "projetodispositivosmovei-4e27e.firebaseapp.com",
-  projectId: "projetodispositivosmovei-4e27e",
-  storageBucket: "projetodispositivosmovei-4e27e.firebasestorage.app",
-  messagingSenderId: "138336816791",
-  appId: "1:138336816791:web:1ce020ddd8febdffa023d2",
-  measurementId: "G-YD81RW5CH8"
-};
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
@@ -56,17 +47,3 @@ export class Firebase{
         await deleteDoc(doc(db, this.tableName, id))
     }
 }
-
-/*
-Exemplo de uso (sim esse exemplo funciona)
-var firebase = new Firebase('usuario')
-firebase.getDatas()
-*/
-
-/*OBS:
-1. Recomendo salvar os dados no formato de JSON, Ã© melhor para utilizar
-2. Ao adicionar um dado a tabela, caso a tabela nÃ£o exista ele cria automaticamente
-3. Adicionei vocÃª no projeto do Firebase como proprietÃ¡rio, lÃ¡ da para alterar tudo
-4. https://console.firebase.google.com/project/ddmfirebase-96956/overview?hl=pt-br (Com esse link da para acessar o banco pelo navegador)
-5. npm i firebase (Caso nÃ£o saiba instalar ðŸ¤¡)
-*/

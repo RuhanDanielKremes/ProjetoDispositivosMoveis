@@ -31,6 +31,20 @@ const CadastroSolicitacao: React.FC = () => {
   }
 
   const takePhoto = async () => {
+    //For Web use this
+    /*
+    try {
+      const hasPermission = await requestCameraPermission();
+      if (!hasPermission) {
+        console.log('Permissão de câmera não concedida');
+        return;
+      }
+      
+    } catch (error) {
+      console.error("Erro ao solicitar permissão de câmera:", error);
+    }
+    */
+    //For Android use this
     const hasPermission = await requestCameraPermission();
     if (!hasPermission) {
       console.log('Permissão de câmera não concedida');
@@ -40,7 +54,7 @@ const CadastroSolicitacao: React.FC = () => {
       const image = await Camera.getPhoto({
         quality: 90,
         allowEditing: false,
-        resultType: CameraResultType.DataUrl // retorna em base64
+        resultType: CameraResultType.DataUrl
       });
 
       setPhoto(image.dataUrl || null);
@@ -61,6 +75,18 @@ const CadastroSolicitacao: React.FC = () => {
   }
 
   const handleSubmit = async () => {
+    //For Web use this
+    /*try {
+      const hasPermission = await requestLocationPermission();
+      if (!hasPermission) {
+        console.log('Permissão de localização não concedida');
+        return;
+      }
+    } catch (error) {
+      console.error("Erro ao solicitar permissão de localização:", error);
+    }
+    */
+    //For Android use this
     const hasPermission = await requestLocationPermission();
     if (!hasPermission) {
       console.log('Permissão de localização não concedida');
