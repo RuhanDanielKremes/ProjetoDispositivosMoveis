@@ -1,0 +1,24 @@
+#main-content {
+  --background: #000000; /* fundo do IonPage */
+  background-color: #000000; /* fallback para qualquer div interna */
+  color: #ffffff; /* opcional, muda a cor do texto */
+}
+
+.content-black {
+  --background: #121212;;
+}
+
+
+.custom-toolbar2 {
+  --background: #ffffff; /* fundo azul escuro */
+  --color: #000000;      /* texto e ícones brancos */
+}
+
+.MainDiv {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    justify-self: center;
+}

@@ -1,0 +1,28 @@
+.MainDiv {
+    margin-top: 20px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    justify-self: center;
+    padding: 0 10px; /* espaçamento nas bordas */
+}
+
+/* Media query para telas menores que 400px (ex: celulares pequenos) */
+@media (max-width: 400px) {
+    .MainDiv {
+        max-width: 100%;
+        margin-top: 10px;
+        padding: 0 5px;
+    }
+}
+
+/* Media query para telas maiores que 800px (ex: desktop) */
+@media (min-width: 800px) {
+    .MainDiv {
+        max-width: 800px;
+        margin-top: 40px;
+    }
+}

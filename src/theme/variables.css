@@ -1,0 +1,17 @@
+:root {
+  --ion-color-darkblue: #0d47a1;
+  --ion-color-darkblue-rgb: 13, 71, 161;
+  --ion-color-darkblue-contrast: #ffffff;
+  --ion-color-darkblue-contrast-rgb: 255, 255, 255;
+  --ion-color-darkblue-shade: #0b3e8f;
+  --ion-color-darkblue-tint: #2e5ec0;
+}
+
+:root {
+  --ion-color-white: #ffffff;
+  --ion-color-white-rgb: 255, 255, 255;
+  --ion-color-white-contrast: #0d47a1;
+  --ion-color-white-contrast-rgb: 13, 71, 161;
+  --ion-color-white-shade: #e6e6e6;
+  --ion-color-white-tint: #eeeeee;
+}

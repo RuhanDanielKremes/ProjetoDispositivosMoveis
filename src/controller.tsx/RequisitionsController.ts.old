@@ -1,0 +1,55 @@
+import { HttpConection } from "../components/Json";
+import { Requisition } from "../models/Requisitions";
+
+export class RequisitionsController {
+
+    private http;
+    
+    public constructor() {
+        this.http = new HttpConection('');
+        if (sessionStorage.getItem('token') != null) {
+            HttpConection.setHeader("Authorization", "Bearer " + sessionStorage.getItem('token'));
+        }
+        HttpConection.setHeader("Content-Type", "application/json");
+    }
+
+    public createRequisition(requisition: Requisition) {
+        let json = JSON.stringify(requisition);
+        return this.http.sendJson('/requisitions', 'POST', json);
+    }
+
+    public sendRequisitionPhoto(requisitionId: number, photo: string) {
+        let data = {
+            photo: photo
+        };
+        let json = JSON.stringify(data);
+        return this.http.sendJson('/requisitions/' + requisitionId + '/photo', 'POST', json);
+    }
+
+    public getRequisitions() {
+        return this.http.sendJson('/requisitions', 'GET');
+    }
+
+    public getRequisitionById(id: number) {
+        return this.http.sendJson('/requisitions/' + id, 'GET');
+    }
+
+    public editRequisition(requisition: Requisition) {
+        let json = JSON.stringify(requisition);
+        return this.http.sendJson('/requisitions/' + requisition.getId(), 'PUT', json);
+    }
+
+    public deleteRequisition(id: number) {
+        try {
+            this.deleteRequisitionPhoto(id);
+        } catch (error) {
+            console.error("Erro ao deletar a foto da requisição:", error);
+        }
+        return this.http.sendJson('/requisitions/' + id, 'DELETE');
+    }
+
+    public deleteRequisitionPhoto(id: number) {
+        return this.http.sendJson('/requisitions/' + id + '/photo', 'DELETE');
+    }
+
+}

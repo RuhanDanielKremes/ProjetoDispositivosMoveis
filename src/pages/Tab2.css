@@ -1,0 +1,13 @@
+.custom-toolbar {
+  --background: #0d47a1; /* fundo azul escuro */
+  --color: #ffffff;      /* texto e ícones brancos */
+}
+
+.MainDiv {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;;
+    max-width: 600px;
+    width: 100%;
+    justify-self: center;
+}
