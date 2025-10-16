@@ -31,7 +31,7 @@ Quando ele terminar de carregar ele vai disponibilizar para exibição nas vers�
 ----VIDEO DO APP---
 https://photos.app.goo.gl/7zuNHbGSQJnT2hWM7
 ---APK do APP---
-https://drive.google.com/file/d/1VRsWjTnGkOISyiMz8EF0LzHVA8daeu3j/view?usp=sharing
+[https://drive.google.com/file/d/1VRsWjTnGkOISyiMz8EF0LzHVA8daeu3j/view?usp=sharing](https://drive.google.com/file/d/1FUOCWs26Wxs19UZTb8OwUc3TJrI_nVeU/view?usp=sharing)
 
 1. Requisitos de Sistema
 
