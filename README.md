@@ -1,9 +1,35 @@
-## 🚀 Como rodar o projeto
-
-### 1️⃣ Instale as dependências
-```bash
 npm install
+npm run build
 
+Isso vai gerar a pasta build com os arquivos web que o Capacitor usa.
+Depois disso, você sincroniza para o Android:
+
+npx cap sync android
+
+No Android Studio
+Clique em Open (ou Open an existing project).
+Navegue até o diretório do seu projeto projetodispositivosmoveisfront/android/.
+Confirme. O Android Studio vai reconhecer o Gradle e o SDK.
+Espere ou realize a ação de sicronizar completar
+
+OPÇÃO 1
+Build > Build APK(s) > Build APK ou Generate Signed Bundle / APK
+projetodispositivosmoveisfront\android\app\build\outputs\apk\release\app-release-unsigned.apk
+
+OPÇÃO 2
+Escolha seu dispositivo e rode como DEBUG
+
+OPÇÃO 3 (RECOMENDADO)
+Baixe a extensão WebNative, depois de instalar, abra o projeto na pasta raiz
+Quando ele terminar de carregar ele vai disponibilizar para exibição nas versões
+-> WEB (testado)
+-> Android (testado)
+-> IOS (não testado)
+
+----VIDEO DO APP---
+https://photos.app.goo.gl/7zuNHbGSQJnT2hWM7
+---APK do APP---
+https://drive.google.com/file/d/1VRsWjTnGkOISyiMz8EF0LzHVA8daeu3j/view?usp=sharing
 
 1. Requisitos de Sistema
 
@@ -38,7 +64,7 @@ npm install -g firebase-tools
 
 Clonar o projeto:
 
-git clone <URL_DO_REPOSITORIO>
+git clone [<URL_DO_REPOSITORIO>](https://github.com/RuhanDanielKremes/ProjetoDispositivosMoveis/)
 cd projetodispositivosmoveisfront
 
 
