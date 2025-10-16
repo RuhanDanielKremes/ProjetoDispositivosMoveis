@@ -35,14 +35,14 @@ const LoginPage: React.FC = () => {
             <IonContent fullscreen>
                 <div className="setCenter">
                     <div className="mainContainer"> 
-                        <IonImg src={logoUTFPR} onClick={() => window.location.href = "/solicitacoesPage"}></IonImg>
+                        <IonImg src={logoUTFPR}></IonImg>
                         <IonItem id="II01" className="ionItemBottonBorder itemLightBackground1" style={{marginTop : "20px"}}>
                             <IonTitle className="ion-text-center" size="large" style={{marginBottom: "20px", marginTop: "20px", color:"#000", fontSize:"40px"}}>LOGIN</IonTitle>
                         </IonItem>
                         {
                             (username !== "" && usertoken !== "") ? (
                                 <div id="subscribeContainer">
-                                    <IonIcon icon={personCircle} id="userIcon"/>
+                                    <IonIcon icon={personCircle} id="userIcon" style={{ color: "#000000" }}/>
                                     <IonLabel id="usernameLabel">{username}</IonLabel>
                                     <div style={{display:"block"}}>
                                         <IonButton id="loginButton" className="loginButtons" onClick={() => {history.push("/solicitacoesPage")}}>LOGIN</IonButton>

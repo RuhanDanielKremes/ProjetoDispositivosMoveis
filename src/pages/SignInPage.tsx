@@ -30,7 +30,7 @@ const SignInPage: React.FC = () => {
             <IonContent fullscreen>
                 <div className="setCenter">
                     <div className="mainContainer"> 
-                        <IonImg src={logoUTFPR} onClick={() => history.push("/recipes")}></IonImg>
+                        <IonImg src={logoUTFPR}></IonImg>
                         <IonItem id="II01" className="ionItemBottonBorder itemLightBackground1" style={{marginTop : "20px"}}>
                             <IonTitle className="ion-text-center" size="large" style={{marginBottom: "20px", marginTop: "20px", color:"#000", fontSize:"40px"}}>Subscribe</IonTitle>
                         </IonItem>

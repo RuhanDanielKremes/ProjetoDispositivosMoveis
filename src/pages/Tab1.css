@@ -26,3 +26,11 @@
         margin-top: 40px;
     }
 }
+
+.editableHighlight {
+  border: 2px solid #ffd900; /* borda amarela */
+  border-radius: 8px;
+  background-color: #fff8c4; /* fundo claro */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* leve sombra para destaque */
+  transition: all 0.2s ease-in-out; /* suaviza efeito */
+}

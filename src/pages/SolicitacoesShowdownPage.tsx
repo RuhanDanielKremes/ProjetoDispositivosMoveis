@@ -81,6 +81,7 @@ const SolicitacoesShowdownPage: React.FC = () => {
             <IonIcon icon={chatbox}></IonIcon>
           </IonFabButton>
         </IonFab>
+        <div style={{ height: '20px' }}></div>
         <div className='MainDiv'>
           <IonItem>
             <IonLabel>DATA: {requisition?.getDate() ? new Date(requisition.getDate()).toLocaleDateString() : ""}</IonLabel>
@@ -93,6 +94,7 @@ const SolicitacoesShowdownPage: React.FC = () => {
           </IonItem>
           <IonItem>
             <IonInput
+              className={edit ? "editableHighlight" : ""}
               value={requisition?.getTitle() ?? "Sem título"}
               disabled={!edit}
               onIonInput={(e: CustomEvent) => requisition?.setTitle(e.detail.value!)}
@@ -103,6 +105,7 @@ const SolicitacoesShowdownPage: React.FC = () => {
             <IonLabel>LONGITUDE: {requisition?.getLongitude() ?? "Sem longitude"}</IonLabel>
           </IonItem>
           <IonTextarea
+            className={edit ? "editableHighlight" : ""}
             value={requisition?.getDescription() ?? "Sem descrição"}
             disabled={!edit}
             onIonInput={(e: CustomEvent) => requisition?.setDescription(e.detail.value!)}
@@ -122,6 +125,7 @@ const SolicitacoesShowdownPage: React.FC = () => {
               <IonItem>Nenhum comentário.</IonItem>
             )
           }
+          <div style={{ height: '80px' }}></div>
         </div>
 
 

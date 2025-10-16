@@ -19,7 +19,23 @@ const CadastroSolicitacao: React.FC = () => {
   const [description, setDescription] = useState("");
   const [photo, setPhoto] = useState<string | null>(null);
 
-   const takePhoto = async () => {
+  async function requestCameraPermission(): Promise<boolean> {
+    const status = await Camera.requestPermissions();
+    if (status.camera === 'granted') {
+      console.log('Permissão de câmera concedida');
+      return true;
+    } else {
+      console.log('Permissão de câmera negada');
+      return false;
+    }
+  }
+
+  const takePhoto = async () => {
+    const hasPermission = await requestCameraPermission();
+    if (!hasPermission) {
+      console.log('Permissão de câmera não concedida');
+      return;
+    }
     try {
       const image = await Camera.getPhoto({
         quality: 90,
@@ -32,8 +48,25 @@ const CadastroSolicitacao: React.FC = () => {
       console.error("Erro ao tirar foto:", err);
     }
   };
-  
+
+  async function requestLocationPermission(): Promise<boolean> {
+    const status = await Geolocation.requestPermissions();
+    if (status.location === 'granted') {
+      console.log('Permissão de localização concedida');
+      return true;
+    } else {
+      console.log('Permissão de localização negada');
+      return false;
+    }
+  }
+
   const handleSubmit = async () => {
+    const hasPermission = await requestLocationPermission();
+    if (!hasPermission) {
+      console.log('Permissão de localização não concedida');
+      return;
+    }
+
     try {
       const position = await Geolocation.getCurrentPosition();
       let requisition = new Requisition();
